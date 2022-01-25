@@ -2,6 +2,13 @@
 
 Enable object lifecycle configuration on buckets to setup automatic deletion of objects after a specified number of days or a specified date.
 
+Please note:
+
+We should note that "minio lifecyle (ILM)  requires distributed mode. it is not recommended in standalone mode." 
+We will find lifecycle option disabled in minio console if we try with minio standalone mode.
+
+but still we can set lifecycle through minio client as per below instructions.
+
 ## 1. Prerequisites
 - Install MinIO - [MinIO Quickstart Guide](https://docs.min.io/docs/minio-quickstart-guide).
 - Install `mc` - [mc Quickstart Guide](https://docs.minio.io/docs/minio-client-quickstart-guide.html)
